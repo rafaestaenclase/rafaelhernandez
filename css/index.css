@@ -1,0 +1,50 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	animation: fadein 2.1s;
+	min-height: 100vh;
+}
+
+.background{
+	position: absolute;
+	width: 100%;
+	display: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header{
+	text-align: center;
+	-webkit-text-stroke: 1px white;
+}
+
+img{
+	margin: auto 0%;
+	-webkit-transition: all 600ms;
+	transition: all 600ms;
+}
+
+img:hover{
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.footer{
+	text-align: center;
+	background-color: white;
+}
+
+.footer p{
+	font-size: 25px;
+	margin-bottom: 0;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
