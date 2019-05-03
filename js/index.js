@@ -6,6 +6,9 @@ $( window ).resize(function() {
 
 
 
+//HOVER FUNCTIONS
+
+
 $('.game').hover(function() {
 	$('.social').css('opacity', '0.9');
 	$('.music').css('opacity', '0.9');
@@ -40,4 +43,53 @@ $('.music').hover(function() {
 	$('.social').css('opacity', '1');
 	$('.backgroundMusic').stop(true);
     $('.backgroundMusic').fadeOut(1000); 
+});
+
+
+$('.game').hover();
+
+//DROPUP INFO
+$('.dropup-icon').addClass("fas fa-arrow-up");
+$('.dropdown-info').hide();
+
+$('.dropup-footer').click(function(){
+	if ($('.dropdown-info').is(":hidden")){
+		$('.footer').animate({
+			'height': $(window).height()+'px'
+		});
+		$('.dropdown-info').show();
+		$('.dropup-footer i').animate({ deg: -180 },{
+			duration: 400,
+			step: function(now) {
+				$(this).css({ transform: 'rotate(' + now + 'deg)' });
+			}
+			}
+		);
+		$('body').css('overflow-y', 'hidden');
+	}else{
+		$('.dropdown-info').hide();
+		$('.footer').animate({
+			'height': '45px'
+		});
+		$('.dropup-footer i').animate({ deg: 0 },{
+			duration: 400,
+			step: function(now) {
+				$(this).css({ transform: 'rotate(' + now + 'deg)' });
+			}
+			}
+		);
+		$('body').css('overflow-y', 'scroll');
+	}
+
+
+});
+
+$( window ).resize(function() {
+	if ($('.footer-info').is(":visible")) {
+		$('.dropup-footer').css(
+			'margin-bottom', ($(window).height()-$('.dropup-footer').height())+'px'
+		);
+		$('.footer-info').height($(window).height()-$('.dropup-footer').height());
+	}
+
 });
