@@ -46,8 +46,6 @@ $('.music').hover(function() {
 });
 
 
-$('.game').hover();
-
 //DROPUP INFO
 $('.dropup-icon').addClass("fas fa-arrow-up");
 $('.dropdown-info').hide();
@@ -85,11 +83,15 @@ $('.dropup-footer').click(function(){
 });
 
 $( window ).resize(function() {
-	if ($('.footer-info').is(":visible")) {
-		$('.dropup-footer').css(
-			'margin-bottom', ($(window).height()-$('.dropup-footer').height())+'px'
-		);
-		$('.footer-info').height($(window).height()-$('.dropup-footer').height());
+	if ($('.dropdown-info').is(":visible")) {
+		$('.footer').css('height', $(window).height()+'px');
 	}
-
 });
+
+
+
+
+
+
+//TEST
+//$( ".dropup-footer" ).trigger( "click" );

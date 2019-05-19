@@ -57,16 +57,31 @@ img:hover{
 	text-align: center;
 	background-color: white;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
 }
+.footer::-webkit-scrollbar { width: 0 !important }
 
 .footer p{
 	font-size: 25px;
 	margin-bottom: 0;
 }
 
-.footer .dropup-footer{
+.button{
 	border:0;
 	background-color: transparent;
+}
+
+.footer .dropup-footer:focus {outline:0;}
+
+.footer .dropdown-info{
+	width: 80%;
+	margin-left: 10%;
+	font-size: 20px;
+}
+
+.footer .dropdown-info .myPic{
+	width: 250px;
+	margin: 2% 0% 2% 0%;
 }
 
 @keyframes fadein {
